@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button text=""></ion-back-button>
+        </ion-buttons>
+    <ion-title class="ion-text-center">插座详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">
+        {{miPlug.alias}}
+      </ion-card-title>
+      <ion-card-subtitle class="ion-text-center">
+        {{miPlug.devid}}
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+        
+        <ion-row>
+          <ion-col class="center">
+              <ion-img [src] = "ledImg" class="ion-padding"></ion-img>
+          </ion-col>
+        </ion-row>
+            <ion-row>
+                <ion-col class = "center">
+                  <ion-button (click)="miPlugControl()" fill="clear" class="switch">
+                    <ion-icon slot= "icon-only" name="power-outline">
+                    </ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+      </ion-card-content>
+    
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        总用电量
+      </ion-label>
+      <ion-note color= "primary">
+        {{miPlugData.energyConsumed | number: '1.2-2'}} Wh
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        当前功率
+      </ion-label>
+      <ion-note color= "primary">
+      {{miPlugData.loadPower | number: '1.2-2'}} W
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
