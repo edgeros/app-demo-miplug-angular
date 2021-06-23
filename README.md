@@ -1,2 +1,4 @@
 # app-demo-miplug-angular
-小米智能插座 `App` 前端工程 `Angular` 版本。
+`app-demo-miplug` 项目的前端工程 `Angular` 版本。
+
+项目链接：【 https://github.com/edgeros/app-demo-miplug 】。
