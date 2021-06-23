@@ -1,2 +1,2 @@
 # app-demo-miplug-angular
-miplug app 前端工程 angular 版本
+小米智能插座 `App` 前端工程 `Angular` 版本。
